@@ -431,21 +431,24 @@ void process_measurements_at_imu_rate(std::pair<std::pair<std::vector<sensor_msg
 
         last_Fz = Fz;
     }
-    //After processing imu data between 2 adjacent keyframes 
-    estimator.sum_dt_preintegration_force += end_t - begin_t;  //accumulate time between 2 adjacent keyframes
-    // cout << "sum_dt_: " << estimator.sum_dt_preintegration_force << endl;
-    //NOTE Ps Vs... update in processIMUandThrust propagation;  Fexts update in process_measurements_at_imu_rate as an average force
-    estimator.Fexts[estimator.frame_count] = estimator.Fexts_temp/ estimator.sum_dt_preintegration_force;  
-    //NOTE optimization init value
-    // cout << "estimator.Fexts[" << estimator.frame_count << "]:  "  << estimator.Fexts[estimator.frame_count] << endl;
-    // cout << "sliding_window: " << endl;
-    //Fz_avg for average Fz between Windows
-    estimator.Fz_avg_vector.at(estimator.frame_count) = estimator.Fz_avg / estimator.sum_dt_preintegration_force;
-    
-    // for(int i=0; i < estimator.frame_count; i++)
-    // {
-    //     cout << i << ": " << estimator.Fexts[i] << endl;
-    // }
+    if (USE_VID)
+    {
+        //After processing imu data between 2 adjacent keyframes 
+        estimator.sum_dt_preintegration_force += end_t - begin_t;  //accumulate time between 2 adjacent keyframes
+        // cout << "sum_dt_: " << estimator.sum_dt_preintegration_force << endl;
+        //NOTE Ps Vs... update in processIMUandThrust propagation;  Fexts update in process_measurements_at_imu_rate as an average force
+        estimator.Fexts[estimator.frame_count] = estimator.Fexts_temp/ estimator.sum_dt_preintegration_force;  
+        //NOTE optimization init value
+        // cout << "estimator.Fexts[" << estimator.frame_count << "]:  "  << estimator.Fexts[estimator.frame_count] << endl;
+        // cout << "sliding_window: " << endl;
+        //Fz_avg for average Fz between Windows
+        estimator.Fz_avg_vector.at(estimator.frame_count) = estimator.Fz_avg / estimator.sum_dt_preintegration_force;
+        
+        // for(int i=0; i < estimator.frame_count; i++)
+        // {
+        //     cout << i << ": " << estimator.Fexts[i] << endl;
+        // }
+    }
 }
 
 #if 0  // processing in imu rate
@@ -694,7 +697,7 @@ int main(int argc, char **argv)
     ros::Subscriber sub_image = n.subscribe("/feature_tracker/feature", 2000, feature_callback);
     ros::Subscriber sub_restart = n.subscribe("/feature_tracker/restart", 2000, restart_callback);
     ros::Subscriber sub_relo_points = n.subscribe("/pose_graph/match_points", 2000, relocalization_callback);
-    ros::Subscriber s4 = n.subscribe("gt_", 40, gt_callback, ros::TransportHints().tcpNoDelay());
+    // ros::Subscriber s4 = n.subscribe("gt_", 40, gt_callback, ros::TransportHints().tcpNoDelay());
 
 
     std::thread measurement_process{VID_process};
