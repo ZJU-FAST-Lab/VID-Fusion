@@ -1,0 +1,13 @@
+# vid-dataset tarj8_with_gt   
+mass: 1.1062                                                               
+thrust_coefficient: [1.85153e-08, 2.01043e-08, 1.96869e-08, 2.22119e-08]
+
+#hovering tarj8_with_gt
+# mass: 1.1033    
+
+# vid-dataset line_with_force_gt
+# mass: 1.1381       
+# thrust_coefficient: [1.59792e-08, 2.09762e-08, 1.78088e-08, 2.40334e-08]
+
+#hovering line_with_force_gt
+# mass: 1.1618

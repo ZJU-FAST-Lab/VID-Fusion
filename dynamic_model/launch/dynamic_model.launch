@@ -1,0 +1,10 @@
+<launch>  
+    <arg name="drone_config_path" default = "$(find feature_tracker)/../config/experiments/drone.yaml" />
+    <node pkg="dynamic_model" type="dynamic_model" name="dynamic_model" output="screen">
+
+        <remap from="/dynamic_model/motor_speed" to="/iris/motor_speed"/>
+        <!-- parms -->
+        <rosparam file="$(arg drone_config_path)" command="load" />
+
+    </node>
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+    <arg name="drone_config_path" default = "$(find feature_tracker)/../config/experiments/drone.yaml" />
+
+    <node pkg="system_identification" type="system_identification" name="system_identification" output="screen">
+
+        <remap from="/motor_speed" to="/iris/motor_speed"/>
+        <rosparam file="$(arg drone_config_path)" command="load" />
+  
+    </node>
+
+</launch>

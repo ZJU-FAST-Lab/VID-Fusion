@@ -1,0 +1,17 @@
+<launch>
+    <arg name="drone_config_path" default = "$(find feature_tracker)/../config/experiments/drone.yaml" />
+
+    <node name="benchmark_publisher_vid" pkg="benchmark_publisher" type="benchmark_publisher" output="screen">
+        <param name="cur_kind" type="int" value="0" />
+        <rosparam file="$(arg drone_config_path)" command="load" />
+        <param name="data_name" type="string" value="$(find benchmark_publisher)/data/tarj8_with_gt/gt.txt" />
+        <remap from="~estimated_odometry" to="/vid_estimator/odometry" />
+    </node>
+<!-- 
+    <node name="benchmark_publisher_vid" pkg="benchmark_publisher" type="benchmark_publisher" output="screen">
+        <param name="cur_kind" type="int" value="1" />
+        <rosparam file="$(arg drone_config_path)" command="load" />
+        <param name="data_name" type="string" value="$(find benchmark_publisher)/data/line_with_force_gt/force_gt.txt" />
+        <remap from="~estimated_odometry" to="/vid_estimator/odometry" />
+    </node> -->
+</launch>
