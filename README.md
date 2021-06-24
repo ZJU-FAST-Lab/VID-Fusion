@@ -2,7 +2,7 @@
 
 ### VID-Fusion: Robust Visual-Inertial-Dynamics Odometry for Accurate External Force Estimation
 
-**Authors:** Ziming Ding , Tiankai Yang, Kunyi Zhang, Chao Xu, and [Fei Gao](https://ustfei.com/) from the [ZJU FAST Lab](https://github.com/ZJU-FAST-Lab/Fast-tracker/blob/main/www.kivact.com).
+**Authors:** Ziming Ding , Tiankai Yang, Kunyi Zhang, Chao Xu, and [Fei Gao](https://ustfei.com/) from the [ZJU FAST Lab](http://www.zju-fast.com).
 
 ## 0. Overview
 
