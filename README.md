@@ -14,13 +14,11 @@
 + A complete, robust, tightly-coupled Visual-Inertial-Dynamics state estimator.
 + Demonstration of robust and accurate external force and pose estimation.
 
-<left>
-<img src="./support_files/image/sliding_window.png" height="300">
-<br>
-<div >Simultaneously estimating the external force and odometry within a sliding window.</div>
-</left>
+ <img src="./support_files/image/sliding_window.png" height="300">
 
-**Related Paper**: [VID-Fusion: Robust Visual-Inertial-Dynamics Odometry for Accurate External Force Estimation](https://arxiv.org/pdf/2011.03993.pdf), Ziming Ding , Tiankai Yang, Kunyi Zhang, Chao Xu, and Fei Gao, *ICRA 2021*.
+Simultaneously estimating the external force and odometry within a sliding window.
+
+**Related Paper**: [VID-Fusion: Robust Visual-Inertial-Dynamics Odometry for Accurate External Force Estimation](https://arxiv.org/pdf/2011.03993.pdf), Ziming Ding, Tiankai Yang, Kunyi Zhang, Chao Xu, and Fei Gao, *ICRA 2021*.
 
 **Video Links:**  [bilibili](https://www.bilibili.com/video/BV1aZ4y1V7NF) or [Youtube](https://www.youtube.com/watch?v=d8NhYngzsF4).
 
