@@ -36,6 +36,8 @@ static bool start_recording_vis = true;
 bool first_pub = false;
 extern double Thrust_n;
 bool force_wo_rotor_drag = false;
+double k_d_x = 0.40;   // rotor drag param
+double k_d_y = 0.25;
 
 void registerPub(ros::NodeHandle &n)
 {
@@ -231,8 +233,6 @@ void pubOdometry(const Estimator &estimator, const std_msgs::Header &header)
             Eigen::Vector3d velocity;
             Eigen::Matrix3d R, Kdrag;
             R = tmp_Q.toRotationMatrix();
-            double k_d_x = 0.40;   // rotor drag param
-            double k_d_y = 0.25;
             Kdrag << k_d_x, 0.0, 0.0,
                     0.0, k_d_y, 0.0,
                     0.0, 0.0, 0.0;
