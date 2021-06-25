@@ -77,6 +77,11 @@ control_thrust_z_n: 0.5      # standard deviation for noise in mass normalized c
 control_thrust_x_y_n: 0.5    # standard deviation for noise in mass normalized collective thrust in body x and y axis
 scale_thrust_input: 1
 
+#rotor drag parameters
+force_wo_rotor_drag: 0        #set to 1 to exclude rotor drag in external force publishing, set to 0 to include rotor drag in external force publishing
+k_d_x: 0.33 #0.40             #rotor drag param x
+k_d_y: 0.33 #0.25             #rotor drag param y
+
 #loop closure parameters
 loop_closure: 0                    # start loop closure
 load_previous_pose_graph: 0        # load and reuse previous pose graph; load from 'pose_graph_save_path'

@@ -35,9 +35,6 @@ static bool start_recording_vis = true;
 
 bool first_pub = false;
 extern double Thrust_n;
-bool force_wo_rotor_drag = false;
-double k_d_x = 0.40;   // rotor drag param
-double k_d_y = 0.25;
 
 void registerPub(ros::NodeHandle &n)
 {

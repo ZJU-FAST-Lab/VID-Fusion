@@ -50,6 +50,9 @@ extern int ROLLING_SHUTTER;
 extern double ROW, COL; //image height, width
 
 // extern Quaterniond q_gt;
+extern int force_wo_rotor_drag;
+extern double k_d_x;   // rotor drag param
+extern double k_d_y;
 
 void readParameters(ros::NodeHandle &n);
 

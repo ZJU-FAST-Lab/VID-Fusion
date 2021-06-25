@@ -32,6 +32,10 @@ std::string CONTROL_TOPIC;
 double ROW, COL;
 double TD, TR; // TR is rolling shutter
 
+int force_wo_rotor_drag = 0;
+double k_d_x = 0.3;   // rotor drag param
+double k_d_y = 0.3;
+
 template <typename T>
 T readParam(ros::NodeHandle &n, std::string name)
 {
@@ -99,6 +103,10 @@ void readParameters(ros::NodeHandle &n)
     THRUST_Z_N = fsSettings["control_thrust_z_n"];
     THRUST_X_Y_N = fsSettings["control_thrust_x_y_n"];
     SCALE_THRUST_INPUT = fsSettings["scale_thrust_input"];
+
+    force_wo_rotor_drag = fsSettings["force_wo_rotor_drag"];;
+    k_d_x = fsSettings["k_d_x"];   // rotor drag param
+    k_d_y = fsSettings["k_d_y"];
 
     ACC_W = fsSettings["acc_w"];
     GYR_N = fsSettings["gyr_n"];

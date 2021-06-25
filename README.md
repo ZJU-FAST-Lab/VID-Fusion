@@ -68,7 +68,7 @@ rosbag play YOUR_PATH_TO_DATASET
 #copy the thrust_coefficient result to VID-Fusion/config/experiments/drone.yaml
 ```
 
-The **external force** is the resultant force except for rotor thrust and aircraft gravity. You can set ***force_wo_rotor_drag*** as *true* in *VID-Fusion/vid_estimator/src/utility/visualization.cpp* to subtract the **rotor drag force** from the estimated force. And the related **drag coefficient** ***k_d_x*** and ***k_d_y*** should be given.
+The **external force** is the resultant force except for rotor thrust and aircraft gravity. You can set ***force_wo_rotor_drag*** as *true* in config file to subtract the **rotor drag force** from the estimated force. And the related **drag coefficient** ***k_d_x*** and ***k_d_y*** should be given.
 
 ## 4. Acknowledgements
 
