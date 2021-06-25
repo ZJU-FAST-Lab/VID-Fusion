@@ -73,9 +73,8 @@ gyr_w:  0.0002  # gyroscope bias random work noise standard deviation.
 g_norm: 9.79      # gravity magnitude
 
 #model parameters       The more accurate parameters you provide, the better performance
-control_thrust_z_n: 0.9 #0.7 #0.08      # standard deviation for noise in mass normalized collective thrust in body z axis (propellor axis)
-control_thrust_x_y_n: 0.9 #0.7 #0.03    # standard deviation for noise in mass normalized collective thrust in body x and y axis
-fext_norm_weight: 150 #150         # weight on zero prior for external force norm 
+control_thrust_z_n: 0.9       # standard deviation for noise in mass normalized collective thrust in body z axis (propellor axis)
+control_thrust_x_y_n: 0.9     # standard deviation for noise in mass normalized collective thrust in body x and y axis
 scale_thrust_input: 1
 
 #loop closure parameters
