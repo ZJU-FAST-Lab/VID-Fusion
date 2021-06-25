@@ -15,7 +15,6 @@ const int NUM_OF_F = 1000; // number of landmarks in the whole window i.e. total
 
 extern double THRUST_X_Y_N; //std deviation of collective rotor thrust in body x and y axis
 extern double THRUST_Z_N; //std deviation of collective rotor thrust in body z axis
-extern double F_EXT_NORM_WEIGHT;
 extern double SCALE_THRUST_INPUT;
 extern int USE_VID;
 extern int PROCESS_AT_CONTROL_INPUT_RATE;

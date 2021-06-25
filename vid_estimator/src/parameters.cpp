@@ -2,7 +2,6 @@
 
 double THRUST_Z_N;
 double THRUST_X_Y_N;
-double F_EXT_NORM_WEIGHT;
 double SCALE_THRUST_INPUT;
 int USE_VID;
 int PROCESS_AT_CONTROL_INPUT_RATE; 
@@ -99,7 +98,6 @@ void readParameters(ros::NodeHandle &n)
 
     THRUST_Z_N = fsSettings["control_thrust_z_n"];
     THRUST_X_Y_N = fsSettings["control_thrust_x_y_n"];
-    F_EXT_NORM_WEIGHT = fsSettings["fext_norm_weight"];
     SCALE_THRUST_INPUT = fsSettings["scale_thrust_input"];
 
     ACC_W = fsSettings["acc_w"];
