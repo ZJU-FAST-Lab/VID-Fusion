@@ -34,7 +34,7 @@ Ceres Solver ([Ceres Installation](http://ceres-solver.org/installation.html)) i
 cd your_catkin_ws/src
 git clone git@github.com:ZJU-FAST-Lab/VID-Fusion.git
 cd ..
-catkin_make  --pkg quadrotor_msgs  # pre-build msg
+catkin_make  --pkg quadrotor_msgs mav_msgs  # pre-build msg
 catkin_make
 ```
 

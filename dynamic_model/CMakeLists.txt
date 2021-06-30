@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
     sensor_msgs
     visualization_msgs
     quadrotor_msgs
+    mav_msgs
     )
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
