@@ -80,6 +80,6 @@ The source code is released under [GPLv3](http://www.gnu.org/licenses/) license.
 
 ## 6. Maintaince
 
-For any technical issues, please contact Ziming Ding ([zmding@zju.edu.cn](mailto:zm_ding@zju.edu.cn)) or Fei GAO ([fgaoaa@zju.edu.cn](mailto:fgaoaa@zju.edu.cn)).
+For any technical issues, please contact Ziming Ding ([zm_ding@zju.edu.cn](mailto:zm_ding@zju.edu.cn)) or Fei GAO ([fgaoaa@zju.edu.cn](mailto:fgaoaa@zju.edu.cn)).
 
 For commercial inquiries, please contact Fei GAO ([fgaoaa@zju.edu.cn](mailto:fgaoaa@zju.edu.cn)).
