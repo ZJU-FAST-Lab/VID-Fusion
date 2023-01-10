@@ -48,7 +48,8 @@ roslaunch benchmark_publisher publish.launch #(option)
 rosbag play YOUR_PATH_TO_DATASET
 ```
 
-We provide the experiment data for testing, in which the [vid-experiment-dataset](https://zjufast-my.sharepoint.com/:f:/g/personal/tkyang_zjufast_onmicrosoft_com/Ejc8zhb5kRZPv3EinLOgEeUBskK3VofGBy_s2Dv196bLlg?e=2EfcuW) is in ros bag type.  The dataset provides two kinds of scenarios: **tarj8_with_gt** and **line_with_force_gt**.
+We provide the experiment data for testing, in which the [vid-experiment-dataset](
+http://zjufast.tpddns.cn:9110/share.cgi?ssid=7616ce6752f54070a15e70efb2e8f247)(password: vid) is in ros bag type.  The dataset provides two kinds of scenarios: **tarj8_with_gt** and **line_with_force_gt**.
 
 * **tarj8_with_gt** is a dataset with odometry groundtruth. The drone flys with a payload.  
 
